@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            /* text-align: center; */
+            /* border: 1px solid; */
+            height: 10vh;
+            width: 100%;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            transition: 0.8s;
+        }
+        .main{
+            height: 100vh;
+            background-color: royalblue;
+        }
+        .main2{
+            height: 200vh;
+            background-color: black;
+            color: blanchedalmond;
+            text-align: center;
+            font-size: 20px;
+        }
+        p{
+            padding-top: 30px;
+        }
+        .new{
+            background: white;
+            color: black;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <nav>Navigation</nav>
+    </div>
+
+    <div class="main2">
+        <p>Sample Text</p>
+    </div>
+
+
+
+<script src="jquery.js"></script>
+<script>
+    $(window).on('scroll',function(){
+    
+    var position = $('.main2').offset()
+    if($(window).scrollTop() > position.top - 50){
+        $('nav').addClass('new')
+    }
+    else{
+        $('nav').removeClass('new')
+    }
+
+    })
+    
+</script>    
+</body>
+</html>
